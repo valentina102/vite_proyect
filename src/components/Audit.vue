@@ -8,7 +8,7 @@
 
             <div class="mb-md-5 mt-md-2 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Auditoria</h2>
+              <h2 class="fw-bold mb-2 text-uppercase">Auditoria </h2>
 
              <div class="form-outline form-white mb-4">
                <table class="table">
