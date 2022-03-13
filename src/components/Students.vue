@@ -8,16 +8,39 @@
 
             <div class="mb-md-5 mt-md-2 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Menu</h2>
+              <h2 class="fw-bold mb-2 text-uppercase">Estudiantes</h2>
 
              <div class="form-outline form-white mb-4">
-               <button class="btn btn-outline-light btn-lg px-5" @click ="goCreateStudent()" type="submit">Registrar Estudiante</button>
+               <table class="table">
+                  <thead >
+                    <tr class=" gradient-custom">
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Program</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td>Octavo</td>
+                    </tr>
+                       <tr>
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td>Octavo</td>
+                    </tr>
+                       <tr>
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td>Octavo</td>
+                    </tr>
+                  </tbody>
+                </table>
              </div>
+             
              <div class="form-outline form-white mb-4">
-               <button class="btn btn-outline-light btn-lg px-5" @click ="goReports()" type="submit">Reportes</button>
-             </div>
-             <div class="form-outline form-white mb-4">
-              <button class="btn btn-outline-light btn-lg px-5" @click ="back()" type="submit">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" @click ="back()" type="submit">Volver</button>
             </div>
             </div>
           </div>
@@ -30,7 +53,7 @@
 
 <script>
 export default {
-  name: 'MenuPage',
+  name: 'StudentsPage',
   props: {
     msg: String
   },
@@ -38,11 +61,8 @@ export default {
   goCreateStudent(){
     this.$router.push('/createStudent');
   },
-   goReports(){
-    this.$router.push('/reports');
-  },
   back(){
-    this.$router.push('/login');
+    this.$router.push('/reports');
   }
 }
 }
@@ -50,6 +70,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+thead{
+  border-color: black;
+}
+th{
+ border: inset 0pt;
+color: white;
+font-weight: bold;
+}
+td{
+color: white;
+}
 .link {
   color: #2574FC;
   text-decoration: none; 

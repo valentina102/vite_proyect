@@ -8,16 +8,19 @@
 
             <div class="mb-md-5 mt-md-2 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Menu</h2>
+              <h2 class="fw-bold mb-2 text-uppercase">Reportes</h2>
 
              <div class="form-outline form-white mb-4">
-               <button class="btn btn-outline-light btn-lg px-5" @click ="goCreateStudent()" type="submit">Registrar Estudiante</button>
+               <button class="btn btn-outline-light btn-lg px-5" @click ="goUser()" type="submit">Usuarios</button>
              </div>
              <div class="form-outline form-white mb-4">
-               <button class="btn btn-outline-light btn-lg px-5" @click ="goReports()" type="submit">Reportes</button>
+               <button class="btn btn-outline-light btn-lg px-5" @click ="goStudent()" type="submit">Estudiantes</button>
              </div>
              <div class="form-outline form-white mb-4">
-              <button class="btn btn-outline-light btn-lg px-5" @click ="back()" type="submit">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" @click ="goAudit()" type="submit">Auditoria</button>
+            </div>
+             <div class="form-outline form-white mb-4">
+              <button class="btn btn-outline-light btn-lg px-5" @click ="back()" type="submit">Volver</button>
             </div>
             </div>
           </div>
@@ -30,19 +33,22 @@
 
 <script>
 export default {
-  name: 'MenuPage',
+  name: 'ReportsPage',
   props: {
     msg: String
   },
   methods: {
-  goCreateStudent(){
-    this.$router.push('/createStudent');
+  goUser(){
+    this.$router.push('/users');
   },
-   goReports(){
-    this.$router.push('/reports');
+  goStudent(){
+    this.$router.push('/students');
+  },
+   goAudit(){
+    this.$router.push('/audit');
   },
   back(){
-    this.$router.push('/login');
+    this.$router.push('/menu');
   }
 }
 }
